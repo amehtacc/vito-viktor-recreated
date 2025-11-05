@@ -1,9 +1,10 @@
 import React from "react";
 import { vitoviktor_logo } from "../assets/images";
+import Button from "./Button";
 
 function Header() {
   return (
-    <header className="w-full h-[121px]">
+    <header className="w-full h-[121px] relative z-10">
       {/* Top Header */}
       <div className="w-full px-[72px] mt-2.5">
         <ul className="flex flex-wrap gap-4 justify-end">
@@ -117,23 +118,26 @@ function Header() {
         <div>
           <img src={vitoviktor_logo} alt="vitoviktor_logo" />
         </div>
-        <div>
+        <div className="flex flex-wrap items-center justify-center gap-10">
           <nav>
-            <ul className="flex gap-10 font-bold">
-              <li>
-                <a href="#">ABOUT</a>
+            <ul className="flex gap-10 font-space font-bold uppercase">
+              <li className="hover:-translate-y-1 transition-all duration-300">
+                <a href="#about">About</a>
               </li>
-              <li>
-                <a href="#">TEAM</a>
+              <li className="hover:-translate-y-1 transition-all duration-300">
+                <a href="#team">Team</a>
               </li>
-              <li>
-                <a href="#">COIN</a>
+              <li className="hover:-translate-y-1 transition-all duration-300">
+                <a href="#coin">Coin</a>
               </li>
-              <li>
-                <a href="#">FOLLOW US</a>
+              <li className="hover:-translate-y-1 transition-all duration-300">
+                <a href="#follow-us">Follow Us</a>
               </li>
             </ul>
           </nav>
+          <span className="font-space font-semibold">
+            <Button text="MINT NFT" />
+          </span>
         </div>
       </div>
     </header>
