@@ -135,7 +135,7 @@ function Header() {
               </li>
             </ul>
           </nav>
-          <span className="font-space font-semibold">
+          <span className="font-space font-bold">
             <Button text="MINT NFT" />
           </span>
         </div>

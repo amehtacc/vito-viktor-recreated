@@ -1,7 +1,45 @@
+@import url('/fonts/gulfs-display/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 @import "tailwindcss";
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@theme {
+  --font-space: "Space Grotesk", sans-serif;
+
+  --font-gulfs-normal: "Gulfs Display Normal", sans-serif;
+  --font-gulfs-expanded: "Gulfs Display Expanded", sans-serif;
+  --font-gulfs-semi-expanded: "Gulfs Display Semi Expanded", sans-serif;
+  --font-gulfs-condensed: "Gulfs Display Condensed", sans-serif;
+  --font-gulfs-extra-expanded: "Gulfs Display Extra Expanded", sans-serif;
+}
+
+@utility font-space {
+  font-family: var(--font-space);
+}
+
+/* Gulfs Display */
+@utility font-gulfs-normal {
+  font-family: var(--font-gulfs-normal);
+}
+
+@utility font-gulfs-expanded {
+  font-family: var(--font-gulfs-expanded);
+}
+
+@utility font-gulfs-semi-expanded {
+  font-family: var(--font-gulfs-semi-expanded);
+}
+
+@utility font-gulfs-condensed {
+  font-family: var(--font-gulfs-condensed);
+}
+
+@utility font-gulfs-extra-expanded {
+  font-family: var(--font-gulfs-extra-expanded);
 }
