@@ -9,11 +9,11 @@ import Button from "../components/Button";
 
 function About() {
   return (
-    <section className="relative w-full mt-[75px] px-[72px]">
+    <section className="relative w-full mt-[75px] px-18">
       <div className="flex flex-col items-center justify-center gap-5">
         <div className="text-center">
           <h2
-            className="font-gulfs-extra-expanded text-2xl text-shadow-[2px_2px_0_rgba(114,221,247)] text-white"
+            className="font-gulfs-expanded text-[1.6rem]/[1] text-shadow-[2px_2px_0_rgba(114,221,247)] text-white"
             style={{
               WebkitTextStroke: "1px rgba(114,221,247)",
             }}
@@ -21,7 +21,7 @@ function About() {
             ABOUT
           </h2>
         </div>
-        <div className="relative w-full text-center font-gulfs-expanded text-black text-[68.8px] gap-5">
+        <div className="relative w-full text-center font-gulfs-expanded text-black text-[4.3rem] gap-5">
           {" Once "}
           <span
             className="text-white text-shadow-[2px_2px_0_rgba(0,0,0)]"
@@ -66,7 +66,7 @@ function About() {
 
       <div className="mt-[150px] lg:h-[600px] flex items-center gap-[30px] mx-auto">
         <div className="font-space w-[50%] h-full text-center flex flex-col items-center justify-center gap-10">
-          <div className="relative text-[27.2px] flex flex-col">
+          <div className="relative text-[1.7rem] flex flex-col max-w-[99%]">
             <p className="mb-3.5">
               Until one rainy day, <b>Celine</b>
               walked in and <b>everything changed</b>. She saw more than a{" "}
