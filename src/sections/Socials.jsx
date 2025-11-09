@@ -137,7 +137,7 @@ function Socials() {
           </div>
         </div>
 
-        <div className="w-full h-[190px] grid grid-cols-5 grid-rows-1 grid-flow-row items-center justify-start gap-5">
+        <div className="w-full grid grid-cols-5 grid-rows-1 grid-flow-row gap-5">
           {socials.map((social) => (
             <SocialCard
               image={social.image}
