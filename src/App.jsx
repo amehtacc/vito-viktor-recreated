@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Socials from "./sections/Socials";
+import Nft from "./sections/Nft"
+import MeetTeam from "./sections/MeetTeam";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Hero />
         <About />
         <Socials />
+        <Nft />
+        <MeetTeam />
       </main>
     </>
   );
