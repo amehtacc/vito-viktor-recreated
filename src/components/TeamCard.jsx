@@ -1,14 +1,14 @@
 import React from "react";
 
 
-function TeamCard() {
+function TeamCard({image, name, designation}) {
   return (
     <div className="w-full h-full py-[35px] border-[0.8px] border-black rounded-[1.875rem] flex flex-col items-center justify-center gap-5">
       <div>
-        <img className="w-47 h-47 rounded-full" src={Team_1} alt="" />
+        <img className="w-47 h-47 rounded-full" src={image} alt={name} />
         <div className="text-center">
-          <h3 className="mt-2 mb-[3px] text-xl font-gulfs-expanded text-[#023047]">SPIKE 11</h3>
-          <p className="font-space">CEO</p>
+          <h3 className="mt-2 mb-[3px] text-xl font-gulfs-expanded text-[#023047]">{name}</h3>
+          <p className="font-space">{designation}</p>
         </div>
       </div>
       <div className="w-[3.1rem] h-[3.1rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)]">

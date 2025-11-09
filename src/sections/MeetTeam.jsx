@@ -6,22 +6,22 @@ function MeetTeam() {
     const teamDetails =[
         {
             image: Team_1,
-            name: "",
+            name: "SPIKE 11",
             designation: "CEO"
         },
         {
             image: Team_2,
-            name: "",
+            name: "PAPII",
             designation: "ADVISOR"
         },
         {
             image: Team_3,
-            name: "",
+            name: "JED_131",
             designation: "ADVISOR"
         },
         {
             image: Team_4,
-            name: "",
+            name: "JOUBREL",
             designation: "ARTIST"
         },
     ]
@@ -39,7 +39,13 @@ function MeetTeam() {
       </div>
 
       <div className="w-full grid grid-cols-3 grid-flow-row gap-5">
-        <TeamCard />
+        {teamDetails.map((team) => (
+            <TeamCard 
+                image={team.image}
+                name={team.name}
+                designation={team.designation}
+            />
+        ))}
       </div>
     </section>
   );
