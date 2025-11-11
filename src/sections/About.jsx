@@ -9,7 +9,7 @@ import Button from "../components/Button";
 
 function About() {
   return (
-    <section className="relative w-full mt-[75px] px-18">
+    <section id="about" className="relative w-full mt-[75px] px-18">
       <div className="flex flex-col items-center justify-center gap-5">
         <div className="text-center">
           <h2

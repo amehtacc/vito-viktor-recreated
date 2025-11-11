@@ -112,7 +112,7 @@ function Socials() {
     },
   ];
   return (
-    <section className="relative w-full px-18">
+    <section id="follow-us" className="relative w-full px-18">
       <div className="w-full pt-[220px] flex flex-col gap-5">
         <div className="text-left flex flex-col items-start justify-start gap-5">
           <div className="">
@@ -148,7 +148,7 @@ function Socials() {
         </div>
       </div>
 
-      <div className="relative w-full pt-[220px]">
+      <div id="coin" className="relative w-full pt-[220px]">
         <div className="absolute top-[103px] left-11">
           <img
             className="w-44 h-44"
