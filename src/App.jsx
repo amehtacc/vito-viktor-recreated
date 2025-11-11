@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Socials from "./sections/Socials";
 import Nft from "./sections/Nft"
 import MeetTeam from "./sections/MeetTeam";
+import Faq from "./sections/Faq";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Socials />
         <Nft />
         <MeetTeam />
+        <Faq />
       </main>
     </>
   );
