@@ -6,6 +6,7 @@ import Socials from "./sections/Socials";
 import Nft from "./sections/Nft"
 import MeetTeam from "./sections/MeetTeam";
 import Faq from "./sections/Faq";
+import VitoSongPlay from "./components/VitoSongPlay";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Nft />
         <MeetTeam />
         <Faq />
+        <VitoSongPlay />
       </main>
     </>
   );

@@ -27,6 +27,7 @@ import Vitoviktor_NFT_collection_10 from "./Vitoviktor-NFT-collection-10.jpg";
 import Vitoviktor_NFT_collection_11 from "./Vitoviktor-NFT-collection-11.jpg";
 import Vitoviktor_NFT_collection_12 from "./Vitoviktor-NFT-collection-12.jpg";
 import Vitoviktor_superman_hero_section from "./Vitoviktor-superman-hero-section.png";
+import viktor_music from "./viktor_music.mp3"
 
 export {
   Caline_Vito,
@@ -58,4 +59,5 @@ export {
   Vitoviktor_NFT_collection_11,
   Vitoviktor_NFT_collection_12,
   Vitoviktor_superman_hero_section,
+  viktor_music,
 };

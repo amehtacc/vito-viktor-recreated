@@ -44,3 +44,19 @@ body {
 @utility font-gulfs-extra-expanded {
   font-family: var(--font-gulfs-extra-expanded);
 }
+
+/* Audio bars */
+@keyframes bar {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.6); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
