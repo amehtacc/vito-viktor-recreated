@@ -1,9 +1,65 @@
 import React from "react";
 import Button from "../components/Button";
+import {
+  Vitoviktor_NFT_collection_1,
+  Vitoviktor_NFT_collection_2,
+  Vitoviktor_NFT_collection_3,
+  Vitoviktor_NFT_collection_4,
+  Vitoviktor_NFT_collection_5,
+  Vitoviktor_NFT_collection_6,
+  Vitoviktor_NFT_collection_7,
+  Vitoviktor_NFT_collection_8,
+  Vitoviktor_NFT_collection_9,
+  Vitoviktor_NFT_collection_10,
+  Vitoviktor_NFT_collection_11,
+  Vitoviktor_NFT_collection_12,
+} from "../assets/images";
 
 function Nft() {
+  const images1 = [
+    {
+      image: Vitoviktor_NFT_collection_1,
+    },
+    {
+      image: Vitoviktor_NFT_collection_2,
+    },
+    {
+      image: Vitoviktor_NFT_collection_3,
+    },
+    {
+      image: Vitoviktor_NFT_collection_4,
+    },
+    {
+      image: Vitoviktor_NFT_collection_5,
+    },
+    {
+      image: Vitoviktor_NFT_collection_6,
+    },
+  ];
+
+  const images2 = [
+    {
+      image: Vitoviktor_NFT_collection_12,
+    },
+    {
+      image: Vitoviktor_NFT_collection_11,
+    },
+    {
+      image: Vitoviktor_NFT_collection_10,
+    },
+    {
+      image: Vitoviktor_NFT_collection_9,
+    },
+    {
+      image: Vitoviktor_NFT_collection_8,
+    },
+    {
+      image: Vitoviktor_NFT_collection_7,
+    },
+  ];
+
   return (
-    <section className="relative w-full px-18 pt-[220px] flex flex-col items-center justify-center gap-5">
+    <section id="nft" className="relative w-full pt-[220px] flex flex-col items-center justify-center gap-5">
       <div className="w-full flex flex-col items-center justify-center gap-5 pb-5">
         <div className="text-center">
           <h2
@@ -27,7 +83,22 @@ function Nft() {
         </div>
       </div>
 
-      <div></div>
+      <div className="w-full flex flex-col items-center justify-center gap-5 pb-5">
+        <div className="w-full grid grid-cols-6 grid-flow-row gap-5">
+          {images2.map((img, index) => (
+            <div key={index} className="w-full h-[290px]">
+              <img className="w-full h-full object-cover rounded-[15px]" src={img.image} alt={img.image} />
+            </div>
+          ))}
+        </div>
+        <div className="w-full flex items-center justify-center gap-5">
+          {images1.map((img, index) => (
+            <div key={index} className="w-full h-[290px]">
+              <img className="w-full h-full object-cover rounded-[15px]" src={img.image} alt={img.image} />
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="pt-[25px] font-space">
         <Button text="STAY UP-TO-DATE" className="font-bold" />
