@@ -7,6 +7,7 @@ import Nft from "./sections/Nft"
 import MeetTeam from "./sections/MeetTeam";
 import Faq from "./sections/Faq";
 import VitoSongPlay from "./components/VitoSongPlay";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Faq />
         <VitoSongPlay />
       </main>
+      <Footer />
     </>
   );
 }
