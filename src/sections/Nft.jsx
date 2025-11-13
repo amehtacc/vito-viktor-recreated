@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "../components/Button";
 import {
   Vitoviktor_NFT_collection_1,
@@ -14,8 +14,12 @@ import {
   Vitoviktor_NFT_collection_11,
   Vitoviktor_NFT_collection_12,
 } from "../assets/images";
+import { motion, useInView } from "motion/react";
 
 function Nft() {
+  const refButton = useRef(null);
+  const isButtonInView = useInView(refButton, { amount: 0.2, once: true });
+
   const images1 = [
     {
       image: Vitoviktor_NFT_collection_1,
@@ -59,7 +63,10 @@ function Nft() {
   ];
 
   return (
-    <section id="nft" className="relative w-full pt-[220px] flex flex-col items-center justify-center gap-5">
+    <section
+      id="nft"
+      className="relative w-full pt-[220px] flex flex-col items-center justify-center gap-5"
+    >
       <div className="w-full flex flex-col items-center justify-center gap-5 pb-5">
         <div className="text-center">
           <h2
@@ -87,22 +94,36 @@ function Nft() {
         <div className="w-full grid grid-cols-6 grid-flow-row gap-5">
           {images2.map((img, index) => (
             <div key={index} className="w-full h-[290px]">
-              <img className="w-full h-full object-cover rounded-[15px]" src={img.image} alt={img.image} />
+              <img
+                className="w-full h-full object-cover rounded-[15px]"
+                src={img.image}
+                alt={img.image}
+              />
             </div>
           ))}
         </div>
         <div className="w-full flex items-center justify-center gap-5">
           {images1.map((img, index) => (
             <div key={index} className="w-full h-[290px]">
-              <img className="w-full h-full object-cover rounded-[15px]" src={img.image} alt={img.image} />
+              <img
+                className="w-full h-full object-cover rounded-[15px]"
+                src={img.image}
+                alt={img.image}
+              />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="pt-[25px] font-space">
+      <motion.div
+        ref={refButton}
+        initial={{ opacity: 0, y: 30 }}
+        animate={isButtonInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="pt-[25px] font-space"
+      >
         <Button text="STAY UP-TO-DATE" className="font-bold" />
-      </div>
+      </motion.div>
     </section>
   );
 }

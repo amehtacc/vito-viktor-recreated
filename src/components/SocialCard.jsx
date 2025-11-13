@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "motion/react";
 
-function SocialCard({image, text, className}) {
+function SocialCard({ image, text, className, delay }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2, once: true });
+
   return (
-    <a
-      href="#"
-      className={`w-full h-[190px]  rounded-[28px] bg-[#72ddf7] flex items-center justify-center hover:bg-[#4ecde9] transition-all duration-300 grow min-w-[200px] md:min-w-64 ${className}`}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1, ease: "easeInOut", delay }}
     >
-      <div className="flex flex-col items-center justify-center">
-        <div className="mb-3.5">
-            {image}
+      <a
+        href="#"
+        className={`w-full h-[190px]  rounded-[28px] bg-[#72ddf7] flex items-center justify-center hover:bg-[#4ecde9] transition-all duration-300 grow min-w-[200px] md:min-w-64 ${className}`}
+      >
+        <div className="flex flex-col items-center justify-center">
+          <div className="mb-3.5">{image}</div>
+          <div className="font-gulfs-expanded">
+            <h3 className="text-xl text-[#023047]">{text}</h3>
+          </div>
         </div>
-        <div className="font-gulfs-expanded">
-          <h3 className="text-xl text-[#023047]">{text}</h3>
-        </div>
-      </div>
-    </a>
+      </a>
+    </motion.div>
   );
 }
 

@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "motion/react";
 
+function TeamCard({ image, name, designation, delay }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
-function TeamCard({image, name, designation}) {
   return (
-    <div className="w-full h-full py-[35px] border-[0.8px] border-black rounded-[1.875rem] flex flex-col items-center justify-center gap-5">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 1, ease: "easeInOut", delay }}
+      className="w-full h-full py-[35px] border-[0.8px] border-black rounded-[1.875rem] flex flex-col items-center justify-center gap-5"
+    >
       <div>
         <img className="w-47 h-47 rounded-full" src={image} alt={name} />
         <div className="text-center">
-          <h3 className="mt-2 mb-[3px] text-xl font-gulfs-expanded text-[#023047]">{name}</h3>
+          <h3 className="mt-2 mb-[3px] text-xl font-gulfs-expanded text-[#023047]">
+            {name}
+          </h3>
           <p className="font-space">{designation}</p>
         </div>
       </div>
@@ -27,7 +38,7 @@ function TeamCard({image, name, designation}) {
           </span>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

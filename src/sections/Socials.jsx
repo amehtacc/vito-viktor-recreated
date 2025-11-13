@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import SocialCard from "../components/SocialCard";
 import {
   vitoviktor_coin_1,
@@ -6,8 +6,27 @@ import {
   Vito_Story,
 } from "../assets/images";
 import Button from "../components/Button";
+import { motion, useInView } from "motion/react";
 
 function Socials() {
+  const refCoinLeft = useRef(null);
+  const refCoinRight = useRef(null);
+  const refAnnounce = useRef(null);
+  const refTextButton = useRef(null);
+  const refStory = useRef(null);
+
+  const isCoinLeftInView = useInView(refCoinLeft, { amount: 0.2, once: true });
+  const isCoinRightInView = useInView(refCoinRight, {
+    amount: 0.2,
+    once: true,
+  });
+  const isAnnounceInView = useInView(refAnnounce, { amount: 0.2, once: true });
+  const isTextButtonInView = useInView(refTextButton, {
+    amount: 0.2,
+    once: true,
+  });
+  const isStoryInView = useInView(refStory, { amount: 0.5, once: true });
+
   const socials = [
     {
       image: (
@@ -138,32 +157,50 @@ function Socials() {
         </div>
 
         <div className="w-full grid grid-cols-5 grid-rows-1 grid-flow-row gap-5">
-          {socials.map((social) => (
+          {socials.map((social, index) => (
             <SocialCard
+              key={index}
               image={social.image}
               text={social.text}
               className={social.rotate}
+              delay={0.2 * index}
             />
           ))}
         </div>
       </div>
 
       <div id="coin" className="relative w-full pt-[220px]">
-        <div className="absolute top-[103px] left-11">
+        <motion.div
+          ref={refCoinLeft}
+          initial={{ opacity: 0, x: -30 }}
+          animate={
+            isCoinLeftInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
+          }
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="absolute top-[103px] left-11"
+        >
           <img
             className="w-44 h-44"
             src={vitoviktor_coin_1}
             alt="vitoviktor_coin_1"
           />
-        </div>
+        </motion.div>
 
-        <div className="absolute top-10 right-20">
+        <motion.div
+          ref={refCoinRight}
+          initial={{ opacity: 0, x: 30 }}
+          animate={
+            isCoinRightInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }
+          }
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="absolute top-10 right-20"
+        >
           <img
             className="w-44 h-44"
             src={vitoviktor_coin_2}
             alt="vitoviktor_coin_2"
           />
-        </div>
+        </motion.div>
 
         <div className="flex flex-col items-center justify-center gap-5">
           <div className="w-full flex flex-col items-center justify-center gap-5">
@@ -177,29 +214,63 @@ function Socials() {
                 {"OUR COIN IS"} <br /> {"LAUNCHING SOON"}
               </h2>
             </div>
-            <div className="bg-[#72ddf7] my-[50px] py-[30px] px-10 rounded-2xl">
+            <motion.div
+              ref={refAnnounce}
+              initial={{ opacity: 0, y: 30 }}
+              animate={
+                isAnnounceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+              }
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="bg-[#72ddf7] my-[50px] py-[30px] px-10 rounded-2xl"
+            >
               <h2 className="text-[#023047] text-[2.9rem]/[1] font-gulfs-expanded tracking-[9.5px]">
                 TO BE ANNOUNCED!
               </h2>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="font-space flex items-center justify-center gap-[150px]">
-            <div>
+          <div
+            ref={refTextButton}
+            className="font-space flex items-center justify-center gap-[150px]"
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={
+                isTextButtonInView
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: -30 }
+              }
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
               <h2 className="font-light text-[2rem]/[1]">
                 Stay up-to-date, don't miss out
               </h2>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={
+                isTextButtonInView
+                  ? { opacity: 1, x: 0 }
+                  : { opacity: 0, x: 30 }
+              }
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
               <Button text="MORE INFO" className="font-bold" />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
-      <div className="relative w-full pt-[220px]">
+      <div ref={refStory} className="relative w-full pt-[220px]">
         <div className="h-[600px] w-full bg-[#72ddf7] rounded-[55px] flex items-center justify-between gap-5 px-10">
-          <div className="w-1/2 flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={
+              isStoryInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+            }
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="w-1/2 flex flex-col items-center justify-center gap-5"
+          >
             <div className="text-center">
               <h2
                 className="font-gulfs-expanded text-white text-[2.5rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
@@ -222,7 +293,7 @@ function Socials() {
             <div className="font-space">
               <Button text="VITO’S STORY" className="font-bold" />
             </div>
-          </div>
+          </motion.div>
 
           <div className="w-1/2 rotate-2 flex flex-col items-center justify-center">
             <img

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Sad_Vito,
   vitoviktor_freezing,
@@ -6,8 +6,12 @@ import {
   Caline_Vito,
 } from "../assets/images";
 import Button from "../components/Button";
+import { motion, useInView } from "motion/react";
 
 function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.3, once: true });
+
   return (
     <section id="about" className="relative w-full mt-[75px] px-18">
       <div className="flex flex-col items-center justify-center gap-5">
@@ -64,8 +68,16 @@ function About() {
         </div>
       </div>
 
-      <div className="mt-[150px] lg:h-[600px] flex items-center gap-[30px] mx-auto">
-        <div className="font-space w-[50%] h-full text-center flex flex-col items-center justify-center gap-10">
+      <div
+        ref={ref}
+        className="mt-[150px] lg:h-[600px] flex items-center gap-[30px] mx-auto"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="font-space w-[50%] h-full text-center flex flex-col items-center justify-center gap-10"
+        >
           <div className="relative text-[1.7rem] flex flex-col max-w-[99%]">
             <p className="mb-3.5">
               Until one rainy day, <b>Celine</b>
@@ -84,7 +96,7 @@ function About() {
             </p>
           </div>
           <Button className="font-bold" text="LEARN MORE" />
-        </div>
+        </motion.div>
 
         <div className="w-[50%] h-full flex items-center justify-center">
           <img
