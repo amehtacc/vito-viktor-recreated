@@ -7,7 +7,7 @@ function Footer() {
   const isInView = useInView(ref, { amount: 0.2, once: true });
 
   return (
-    <footer className="relative w-full px-18 pt-28 flex flex-col items-center justify-center gap-5">
+    <footer ref={ref} className="relative w-full px-18 pt-28 flex flex-col items-center justify-center gap-5">
       <div className="flex flex-col items-center justify-center gap-5 pb-5">
         <img src={vitoviktor_logo} alt="vitoviktor_logo" />
         <h2
@@ -20,7 +20,7 @@ function Footer() {
 
       <div className="flex items-center justify-center gap-12">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
           className="w-[5.2rem] h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
@@ -42,7 +42,7 @@ function Footer() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
           className="w-[5.2rem] h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
@@ -64,7 +64,7 @@ function Footer() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
           className="w-[5.2rem] h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
@@ -86,7 +86,7 @@ function Footer() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
           className="w-[5.2rem] h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
@@ -130,7 +130,7 @@ function Footer() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
           className="w-[5.2rem] h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"

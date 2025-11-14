@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 function Faq() {
-  const [faqIds, setFaqIds] = useState(null);
+  const [faqIds, setFaqIds] = useState(1);
 
   const refFaq = useRef(null);
   const isFaqInView = useInView(refFaq, { amount: 0.2, once: true });

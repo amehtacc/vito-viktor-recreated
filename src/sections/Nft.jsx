@@ -14,11 +14,23 @@ import {
   Vitoviktor_NFT_collection_11,
   Vitoviktor_NFT_collection_12,
 } from "../assets/images";
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useScroll, useTransform } from "motion/react";
 
 function Nft() {
   const refButton = useRef(null);
+  const refGrid = useRef(null);
+  const refGridContainer = useRef(null)
+
   const isButtonInView = useInView(refButton, { amount: 0.2, once: true });
+  const isGridInView = useInView(refGrid, { amount: 0.4, once: true });
+
+  const { scrollYProgress } = useScroll({
+    target: refGridContainer,
+    offset: ["start end", "end start"],
+  });
+
+  const xLeft = useTransform(scrollYProgress, [0, 1], ["25px", "-25px"]);
+  const xRight = useTransform(scrollYProgress, [0, 1], ["-25px", "25px"]);
 
   const images1 = [
     {
@@ -64,6 +76,7 @@ function Nft() {
 
   return (
     <section
+      ref={refGrid}
       id="nft"
       className="relative w-full pt-[220px] flex flex-col items-center justify-center gap-5"
     >
@@ -90,8 +103,14 @@ function Nft() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center gap-5 pb-5">
-        <div className="w-full grid grid-cols-6 grid-flow-row gap-5">
+      <div ref={refGridContainer} className="w-full flex flex-col items-center justify-center gap-5 pb-5 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, x: -25 }}
+          animate={isGridInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          style={{ translateX: xLeft }}
+          className="w-full grid grid-cols-6 grid-flow-row gap-5"
+        >
           {images2.map((img, index) => (
             <div key={index} className="w-full h-[290px]">
               <img
@@ -101,8 +120,14 @@ function Nft() {
               />
             </div>
           ))}
-        </div>
-        <div className="w-full flex items-center justify-center gap-5">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 25 }}
+          animate={isGridInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          style={{ translateX: xRight }}
+          className="w-full flex items-center justify-center gap-5"
+        >
           {images1.map((img, index) => (
             <div key={index} className="w-full h-[290px]">
               <img
@@ -112,7 +137,7 @@ function Nft() {
               />
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <motion.div

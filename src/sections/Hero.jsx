@@ -4,11 +4,18 @@ import {
   Vitoviktor_superman_hero_section,
   vitoviktor_happyface,
 } from "../assets/images";
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useScroll, useTransform } from "motion/react";
 
 function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.3, once: true });
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const yHero = useTransform(scrollYProgress, [0, 1], ["60px", "-70px"]);
 
   return (
     <section
@@ -21,7 +28,7 @@ function Hero() {
       <div className="w-full pt-[304px] text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
           className="inline-block text-white"
         >
@@ -34,9 +41,10 @@ function Hero() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="-mt-[105.8px] -mb-6 text-center flex flex-wrap items-center justify-center"
+          style={{ translateY: yHero }}
+          className="-mt-[105.5px] -mb-6 text-center flex flex-wrap items-center justify-center"
         >
           <img
             className="w-[450px] h-auto"
