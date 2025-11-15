@@ -7,7 +7,10 @@ function Footer() {
   const isInView = useInView(ref, { amount: 0.2, once: true });
 
   return (
-    <footer ref={ref} className="relative w-full px-14 xl:px-18 pt-28 flex flex-col items-center justify-center gap-5">
+    <footer
+      ref={ref}
+      className="relative w-full px-14 xl:px-18 pt-28 flex flex-col items-center justify-center gap-5"
+    >
       <div className="flex flex-col items-center justify-center gap-5 pb-5">
         <img src={vitoviktor_logo} alt="vitoviktor_logo" />
         <h2
@@ -201,9 +204,16 @@ function Footer() {
         </div>
         <div>
           <span>
-            Website recreated by{" "}
             <a
-              className="cursor-pointer underline"
+              className="underline"
+              href="https://vitoviktor.be/"
+              target="_blank"
+            >
+              Website
+            </a>{" "}
+            recreated by{" "}
+            <a
+              className="underline"
               href="https://github.com/amehtacc"
               target="_blank"
             >
