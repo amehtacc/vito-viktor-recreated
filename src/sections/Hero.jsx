@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section
       ref={ref}
-      className="w-full h-auto bg-cover bg-center flex flex-col justify-start px-18 -mt-[204px]"
+      className="w-full h-auto bg-cover bg-center flex flex-col justify-start px-14 xl:px-18 -mt-[204px]"
       style={{
         backgroundImage: `url(${vitoviktor_Hero_section_background_image})`,
       }}
@@ -32,10 +32,10 @@ function Hero() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="inline-block text-white"
         >
-          <h2 className="max-w-full text-[9rem]/[1] text-center font-gulfs-expanded text-shadow-[3px_5px_0_black]">
+          <h2 className="max-w-full text-[6rem]/[1] xl:text-[9rem]/[1] text-center font-gulfs-expanded text-shadow-[3px_5px_0_black]">
             MEET VITO
           </h2>
-          <div className="max-w-full text-[2rem]/[1] text-right font-gulfs-expanded text-shadow-[3px_5px_0_black]">
+          <div className="max-w-full text-[1.3rem]/[1] xl:text-[2rem]/[1] text-right font-gulfs-expanded text-shadow-[3px_5px_0_black]">
             The little hippo
           </div>
         </motion.div>
@@ -44,17 +44,17 @@ function Hero() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{ translateY: yHero }}
-          className="-mt-[105.5px] -mb-6 text-center flex flex-wrap items-center justify-center"
+          className="-mt-[77px] xl:-mt-[105.5px] -mb-6 text-center flex flex-wrap items-center justify-center"
         >
           <img
-            className="w-[450px] h-auto"
+            className="w-[350px] xl:w-[450px] h-auto"
             src={Vitoviktor_superman_hero_section}
             alt=""
           />
         </motion.div>
       </div>
 
-      <a href="#about" className="absolute left-[440px] top-[400px]">
+      <a href="#about" className="absolute left-[250px] xl:left-[440px] top-[350px] xl:top-[400px]">
         <div className="relative flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

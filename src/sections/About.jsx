@@ -13,7 +13,7 @@ function About() {
   const isInView = useInView(ref, { amount: 0.3, once: true });
 
   return (
-    <section id="about" className="relative w-full mt-[75px] px-18">
+    <section id="about" className="relative w-full mt-[75px] px-14 xl:px-18">
       <div className="flex flex-col items-center justify-center gap-5">
         <div className="text-center">
           <h2
@@ -25,7 +25,7 @@ function About() {
             ABOUT
           </h2>
         </div>
-        <div className="relative w-full text-center font-gulfs-expanded text-black text-[4.3rem] gap-5">
+        <div className="relative w-full text-center font-gulfs-expanded text-black text-[3rem] xl:text-[4.3rem] gap-5">
           {" Once "}
           <span
             className="text-white text-shadow-[2px_2px_0_rgba(0,0,0)]"
@@ -70,7 +70,7 @@ function About() {
 
       <div
         ref={ref}
-        className="mt-[150px] lg:h-[600px] flex items-center gap-[30px] mx-auto"
+        className="mt-[150px] xl:h-[600px] flex items-center gap-[30px] mx-auto"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -78,7 +78,7 @@ function About() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="font-space w-[50%] h-full text-center flex flex-col items-center justify-center gap-10"
         >
-          <div className="relative text-[1.7rem] flex flex-col max-w-[99%]">
+          <div className="relative text-[1.3rem] xl:text-[1.7rem] flex flex-col max-w-[99%]">
             <p className="mb-3.5">
               Until one rainy day, <b>Celine</b>
               walked in and <b>everything changed</b>. She saw more than a{" "}

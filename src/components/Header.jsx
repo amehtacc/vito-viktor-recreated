@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="w-full h-[121px] relative z-10">
       {/* Top Header */}
-      <div className="w-full px-18 mt-2.5">
+      <div className="w-full px-14 xl:px-18 mt-2.5">
         <ul className="mx-2 flex flex-wrap gap-4 justify-end">
           <li className="hover:-translate-y-[3px] transition-all duration-300">
             <a href="#">
@@ -114,7 +114,7 @@ function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="w-full px-18 flex items-center justify-between">
+      <div className="w-full px-14 xl:px-18 flex items-center justify-between">
         <div>
           <img src={vitoviktor_logo} alt="vitoviktor_logo" />
         </div>

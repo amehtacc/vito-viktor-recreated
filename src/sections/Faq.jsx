@@ -14,11 +14,11 @@ function Faq() {
   return (
     <section
       id="faq"
-      className="relative w-full px-18 pt-[220px] flex items-start justify-center gap-5"
+      className="relative w-full px-14 xl:px-18 pt-[220px] flex items-start justify-center gap-5"
     >
-      <div className="w-[23%]">
+      <div className="w-[28%] xl:w-[23%]">
         <h2
-          className="font-gulfs-expanded text-white text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
+          className="font-gulfs-expanded text-white text-[3rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
           style={{ WebkitTextStroke: "1px black" }}
         >
           F.A.Q.
@@ -29,18 +29,18 @@ function Faq() {
         initial={{ opacity: 0, x: 30 }}
         animate={isFaqInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="w-[77%]"
+        className="w-[72%] xl:w-[77%]"
       >
         <div
           className={`flex flex-col items-start justify-start mb-10 ${
-            faqIds == 1 ? "h-48" : "h-22"
+            faqIds == 1 ? "h-52 xl:h-48" : "h-22"
           } overflow-hidden transition-all duration-300`}
         >
           <div
             className="w-full border border-black p-[25px] mb-[23px] rounded-[15px] flex items-center justify-between cursor-pointer"
             onClick={() => handleFaqs(1)}
           >
-            <p className="font-space text-2xl text-[#1f2124]">
+            <p className="font-space text-xl xl:text-2xl text-[#1f2124]">
               What is the Vito NFT project all about?
             </p>
             <span
@@ -61,7 +61,7 @@ function Faq() {
           </div>
           <div className="flex w-full items-center justify-start">
             <div className="w-[80%]">
-              <p className="text-lg mb-[0.9rem]">
+              <p className="text-base xl:text-lg mb-[0.9rem]">
                 @vitocollective is run by a small but passionate group of animal
                 lovers, VitoCollective isn’t just another handle posting cute
                 pet pics. It is a movement, sparked by a Bully XXL named Vito,
@@ -74,14 +74,14 @@ function Faq() {
 
         <div
           className={`flex flex-col items-start justify-start mb-10 ${
-            faqIds == 2 ? "h-52" : "h-22"
+            faqIds == 2 ? "h-60 xl:h-52" : "h-22"
           } overflow-hidden transition-all duration-300`}
         >
           <div
             className="w-full border border-black p-[25px] mb-[23px] rounded-[15px] flex items-center justify-between cursor-pointer"
             onClick={() => handleFaqs(2)}
           >
-            <p className="font-space text-2xl text-[#1f2124]">
+            <p className="font-space text-xl xl:text-2xl text-[#1f2124]">
               What makes Vito NFTs unique?
             </p>
             <span
@@ -101,13 +101,13 @@ function Faq() {
             </span>
           </div>
           <div className="flex w-full items-center justify-start">
-            <div className="w-[80%]">
-              <p className="text-lg mb-[0.9rem]">
+            <div className="w-[80%] text-base xl:text-lg">
+              <p className="mb-[0.9rem]">
                 Vito NFTs are unique from its 999 supply – each NFT will have an
                 allocation for the coin that is the Vito Memecoin. The idea is
                 to keep everything fun and keep rewarding our holders
               </p>
-              <p className="text-lg mb-[0.9rem]">
+              <p className="mb-[0.9rem]">
                 No roadmap but we are fully committed to building the Vito brand
                 and IP !!!
               </p>
@@ -124,7 +124,7 @@ function Faq() {
             className="w-full border border-black p-[25px] mb-[23px] rounded-[15px] flex items-center justify-between cursor-pointer"
             onClick={() => handleFaqs(3)}
           >
-            <p className="font-space text-2xl text-[#1f2124]">
+            <p className="font-space text-xl xl:text-2xl text-[#1f2124]">
               Can I get early access?
             </p>
             <span
@@ -145,7 +145,7 @@ function Faq() {
           </div>
           <div className="flex w-full items-center justify-start">
             <div className="w-[80%]">
-              <p className="text-lg mb-[0.9rem]">
+              <p className="text-base xl:text-lg mb-[0.9rem]">
                 yes you can currently get a WL and that will allow you to
                 participate in the mint
               </p>

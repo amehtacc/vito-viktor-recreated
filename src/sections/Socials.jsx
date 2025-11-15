@@ -32,8 +32,8 @@ function Socials() {
       image: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="85"
-          height="85"
+          width="full"
+          height="full"
           viewBox="0 0 110 85"
           fill="none"
         >
@@ -50,8 +50,8 @@ function Socials() {
       image: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="85"
-          height="85"
+          width="full"
+          height="full"
           viewBox="0 0 360 360"
           fill="none"
         >
@@ -76,8 +76,8 @@ function Socials() {
       image: (
         <svg
           aria-hidden="true"
-          width="85"
-          height="85"
+          width="full"
+          height="full"
           class="e-font-icon-svg e-fab-x-twitter"
           viewBox="0 0 512 512"
           xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +95,8 @@ function Socials() {
       image: (
         <svg
           aria-hidden="true"
-          width="85"
-          height="85"
+          width="full"
+          height="full"
           class="e-font-icon-svg e-fab-instagram"
           viewBox="0 0 448 512"
           xmlns="http://www.w3.org/2000/svg"
@@ -114,8 +114,8 @@ function Socials() {
       image: (
         <svg
           aria-hidden="true"
-          width="85"
-          height="85"
+          width="full"
+          height="full"
           class="e-font-icon-svg e-fab-tiktok"
           viewBox="0 0 448 512"
           xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +131,7 @@ function Socials() {
     },
   ];
   return (
-    <section id="follow-us" className="relative w-full px-18">
+    <section id="follow-us" className="relative w-full px-14 xl:px-18">
       <div className="w-full pt-[220px] flex flex-col gap-5">
         <div className="text-left flex flex-col items-start justify-start gap-5">
           <div className="">
@@ -146,7 +146,7 @@ function Socials() {
           </div>
           <div className="">
             <h2
-              className="font-gulfs-expanded text-white text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
+              className="font-gulfs-expanded text-white text-[3rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
               style={{
                 WebkitTextStroke: "1px black",
               }}
@@ -177,10 +177,10 @@ function Socials() {
             isCoinLeftInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }
           }
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="absolute top-[103px] left-11"
+          className="absolute top-[103px] left-6 xl:left-11"
         >
           <img
-            className="w-44 h-44"
+            className="w-36 xl:w-44"
             src={vitoviktor_coin_1}
             alt="vitoviktor_coin_1"
           />
@@ -193,10 +193,10 @@ function Socials() {
             isCoinRightInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }
           }
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="absolute top-10 right-20"
+          className="absolute top-10 right-10 xl:right-20"
         >
           <img
-            className="w-44 h-44"
+            className="w-36 xl:w-44"
             src={vitoviktor_coin_2}
             alt="vitoviktor_coin_2"
           />
@@ -206,7 +206,7 @@ function Socials() {
           <div className="w-full flex flex-col items-center justify-center gap-5">
             <div className="text-center">
               <h2
-                className="font-gulfs-expanded text-white text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)] tracking-[9.5px]"
+                className="font-gulfs-expanded text-white text-[3rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)] tracking-[9.5px]"
                 style={{
                   WebkitTextStroke: "1px black",
                 }}
@@ -223,7 +223,7 @@ function Socials() {
               transition={{ duration: 1, ease: "easeInOut" }}
               className="bg-[#72ddf7] my-[50px] py-[30px] px-10 rounded-2xl"
             >
-              <h2 className="text-[#023047] text-[2.9rem]/[1] font-gulfs-expanded tracking-[9.5px]">
+              <h2 className="text-[#023047] text-[2rem]/[1] xl:text-[2.9rem]/[1] font-gulfs-expanded tracking-[9.5px]">
                 TO BE ANNOUNCED!
               </h2>
             </motion.div>
@@ -242,7 +242,7 @@ function Socials() {
               }
               transition={{ duration: 1, ease: "easeInOut" }}
             >
-              <h2 className="font-light text-[2rem]/[1]">
+              <h2 className="font-light text-[1.7rem]/[1] xl:text-[2rem]/[1]">
                 Stay up-to-date, don't miss out
               </h2>
             </motion.div>
@@ -262,7 +262,7 @@ function Socials() {
       </div>
 
       <div ref={refStory} className="relative w-full pt-[220px]">
-        <div className="h-[600px] w-full bg-[#72ddf7] rounded-[55px] flex items-center justify-between gap-5 px-10">
+        <div className="h-[500px] xl:h-[600px] w-full bg-[#72ddf7] rounded-[55px] flex items-center justify-between gap-5 px-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={
@@ -273,7 +273,7 @@ function Socials() {
           >
             <div className="text-center">
               <h2
-                className="font-gulfs-expanded text-white text-[2.5rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
+                className="font-gulfs-expanded text-white text-[2rem]/[1] xl:text-[2.5rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
                 style={{
                   WebkitTextStroke: "1px black",
                 }}
@@ -281,7 +281,7 @@ function Socials() {
                 {"VITO’S STORY"} <br /> {" HELPS SHELTERS"}
               </h2>
             </div>
-            <div className="text-center font-space text-[1.3rem] max-w-[85%]">
+            <div className="text-center font-space text-lg xl:text-[1.3rem] max-w-[85%]">
               <p className="mb-[0.9rem] w-full">
                 Vito’s rescue went viral — but the mission is just starting.
               </p>
@@ -297,7 +297,7 @@ function Socials() {
 
           <div className="w-1/2 rotate-2 flex flex-col items-center justify-center">
             <img
-              className="rounded-[55px] w-[530px] h-[500px] object-cover shadow-[15px_15px_0_rgba(0,0,0)]"
+              className="rounded-[55px] xl:w-[530px] xl:h-[500px] object-cover shadow-[15px_15px_0_rgba(0,0,0)]"
               src={Vito_Story}
               alt="Vito_Story"
             />

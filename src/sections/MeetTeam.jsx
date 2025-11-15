@@ -28,11 +28,11 @@ function MeetTeam() {
   return (
     <section
       id="team"
-      className="relative w-full px-18 pt-[220px] flex flex-col items-center justify-center gap-5"
+      className="relative w-full px-14 xl:px-18 pt-[220px] flex flex-col items-center justify-center gap-5"
     >
       <div className="pb-[35px] text-center">
         <h2
-          className="font-gulfs-expanded text-white text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
+          className="font-gulfs-expanded text-white text-[3rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
           style={{
             WebkitTextStroke: "1px black",
           }}

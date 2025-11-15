@@ -93,7 +93,7 @@ function Nft() {
         </div>
         <div className="text-center">
           <h2
-            className="font-gulfs-expanded text-white text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
+            className="font-gulfs-expanded text-white text-[3rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
             style={{
               WebkitTextStroke: "1px black",
             }}
@@ -103,16 +103,16 @@ function Nft() {
         </div>
       </div>
 
-      <div ref={refGridContainer} className="w-full flex flex-col items-center justify-center gap-5 pb-5 overflow-hidden">
+      <div ref={refGridContainer} className="w-full flex flex-col items-center justify-center gap-3 xl:gap-5 pb-5 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: -25 }}
           animate={isGridInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           style={{ translateX: xLeft }}
-          className="w-full grid grid-cols-6 grid-flow-row gap-5"
+          className="w-full grid grid-cols-6 grid-flow-row gap-3 xl:gap-5"
         >
           {images2.map((img, index) => (
-            <div key={index} className="w-full h-[290px]">
+            <div key={index} className="w-full h-[190px] xl:h-[290px]">
               <img
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
@@ -126,10 +126,10 @@ function Nft() {
           animate={isGridInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           style={{ translateX: xRight }}
-          className="w-full flex items-center justify-center gap-5"
+          className="w-full flex items-center justify-center gap-3 xl:gap-5"
         >
           {images1.map((img, index) => (
-            <div key={index} className="w-full h-[290px]">
+            <div key={index} className="w-full h-[190px] xl:h-[290px]">
               <img
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
