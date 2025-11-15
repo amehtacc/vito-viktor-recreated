@@ -44,12 +44,12 @@ function Hero() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{ translateY: yHero }}
-          className="-mt-[77px] xl:-mt-[105.5px] -mb-6 text-center flex flex-wrap items-center justify-center"
+          className="-mt-[77px] xl:-mt-[107px] text-center flex flex-wrap items-center justify-center"
         >
           <img
             className="w-[350px] xl:w-[450px] h-auto"
             src={Vitoviktor_superman_hero_section}
-            alt=""
+            alt="Vitoviktor_superman_hero_section"
           />
         </motion.div>
       </div>
