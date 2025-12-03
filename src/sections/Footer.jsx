@@ -12,7 +12,7 @@ function Footer() {
       className="relative w-full px-14 xl:px-18 pt-28 flex flex-col items-center justify-center gap-5"
     >
       <div className="flex flex-col items-center justify-center gap-5 pb-5">
-        <img src={vitoviktor_logo} alt="vitoviktor_logo" loading="lazy"/>
+        <img src={vitoviktor_logo} alt="vitoviktor_logo" loading="lazy" />
         <h2
           className="font-gulfs-expanded text-[3rem]/[1] xl:text-[4rem]/[1] text-white text-shadow-[2px_2px_0_black]"
           style={{ WebkitTextStroke: "1px black" }}
@@ -28,7 +28,7 @@ function Footer() {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
-          <a href="#">
+          <a href="#" aria-label="Visit our Twitter/X">
             <span>
               <svg
                 aria-hidden="true"
@@ -50,7 +50,7 @@ function Footer() {
           transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
           className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
-          <a href="#">
+          <a href="#" aria-label="Visit our TikTok">
             <span>
               <svg
                 aria-hidden="true"
@@ -72,7 +72,7 @@ function Footer() {
           transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
           className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
-          <a href="#">
+          <a href="#" aria-label="Visit our Instagram">
             <span>
               <svg
                 aria-hidden="true"
@@ -94,7 +94,7 @@ function Footer() {
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
           className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
-          <a href="#">
+          <a href="#" aria-label="Visit our Opensea">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ function Footer() {
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
           className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
-          <a href="#">
+          <a href="#" aria-label="Join our Discord">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,13 +193,17 @@ function Footer() {
       <div className="w-full flex items-center justify-between pt-5 pb-2.5 text-[0.8rem]/[1] font-space">
         <div>
           <ul className="flex items-center justify-center">
-            <a href="#">
-              <li>Cookies</li>
-            </a>
-            <hr className="w-5 rotate-90 text-gray-300" />
-            <a href="#">
-              <li>Privacy policy</li>
-            </a>
+            <li>
+              <a href="#">Cookies</a>
+            </li>
+
+            <li aria-hidden="true">
+              <hr className="w-5 rotate-90 text-gray-300" />
+            </li>
+
+            <li>
+              <a href="#">Privacy policy</a>
+            </li>
           </ul>
         </div>
         <div>

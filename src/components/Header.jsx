@@ -9,7 +9,7 @@ function Header() {
       <div className="w-full px-14 xl:px-18 mt-2.5">
         <ul className="mx-2 flex flex-wrap gap-4 justify-end">
           <li className="hover:-translate-y-[3px] transition-all duration-300">
-            <a href="#">
+            <a href="#" aria-label="Visit our Instagram">
               <span>
                 <svg
                   aria-hidden="true"
@@ -25,7 +25,7 @@ function Header() {
             </a>
           </li>
           <li className="hover:-translate-y-[3px] transition-all duration-300">
-            <a href="#">
+            <a href="#" aria-label="Visit our TikTok">
               <span>
                 <svg
                   aria-hidden="true"
@@ -41,7 +41,7 @@ function Header() {
             </a>
           </li>
           <li className="hover:-translate-y-[3px] transition-all duration-300">
-            <a href="#">
+            <a href="#" aria-label="Visit our Opensea">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ function Header() {
             </a>
           </li>
           <li className="hover:-translate-y-[3px] transition-all duration-300">
-            <a href="#">
+            <a href="#" aria-label="Visit our Twitter/X">
               <span>
                 <svg
                   aria-hidden="true"
@@ -95,7 +95,7 @@ function Header() {
             </a>
           </li>
           <li className="hover:-translate-y-[3px] transition-all duration-300">
-            <a href="#">
+            <a href="#" aria-label="Join our Discord">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

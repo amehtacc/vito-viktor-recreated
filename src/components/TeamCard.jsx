@@ -23,7 +23,7 @@ function TeamCard({ image, name, designation, delay }) {
         </div>
       </div>
       <div className="w-[3.1rem] h-[3.1rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300">
-        <a href="#">
+        <a href="#" aria-label="Visit our Twitter/X">
           <span>
             <svg
               aria-hidden="true"
