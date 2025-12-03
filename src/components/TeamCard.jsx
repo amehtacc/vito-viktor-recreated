@@ -14,7 +14,7 @@ function TeamCard({ image, name, designation, delay }) {
       className="w-full h-full py-[35px] border-[0.8px] border-black rounded-[1.875rem] flex flex-col items-center justify-center gap-5"
     >
       <div>
-        <img className="w-36 h-36 xl:w-47 xl:h-47 rounded-full" src={image} alt={name} />
+        <img className="w-36 h-36 xl:w-47 xl:h-47 rounded-full" src={image} alt={name} loading="lazy" />
         <div className="text-center">
           <h3 className="mt-2 mb-[3px] text-base xl:text-xl font-gulfs-expanded text-[#023047]">
             {name}

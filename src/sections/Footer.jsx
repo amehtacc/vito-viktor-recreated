@@ -12,7 +12,7 @@ function Footer() {
       className="relative w-full px-14 xl:px-18 pt-28 flex flex-col items-center justify-center gap-5"
     >
       <div className="flex flex-col items-center justify-center gap-5 pb-5">
-        <img src={vitoviktor_logo} alt="vitoviktor_logo" />
+        <img src={vitoviktor_logo} alt="vitoviktor_logo" loading="lazy"/>
         <h2
           className="font-gulfs-expanded text-[3rem]/[1] xl:text-[4rem]/[1] text-white text-shadow-[2px_2px_0_black]"
           style={{ WebkitTextStroke: "1px black" }}

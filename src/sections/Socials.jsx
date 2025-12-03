@@ -183,6 +183,7 @@ function Socials() {
             className="w-36 xl:w-44"
             src={vitoviktor_coin_1}
             alt="vitoviktor_coin_1"
+            loading="lazy"
           />
         </motion.div>
 
@@ -199,6 +200,7 @@ function Socials() {
             className="w-36 xl:w-44"
             src={vitoviktor_coin_2}
             alt="vitoviktor_coin_2"
+            loading="lazy"
           />
         </motion.div>
 
@@ -300,6 +302,7 @@ function Socials() {
               className="rounded-[55px] xl:w-[530px] xl:h-[500px] object-cover shadow-[15px_15px_0_rgba(0,0,0)]"
               src={Vito_Story}
               alt="Vito_Story"
+              loading="lazy"
             />
           </div>
         </div>

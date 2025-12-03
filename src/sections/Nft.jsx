@@ -117,6 +117,7 @@ function Nft() {
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
                 alt={img.image}
+                loading="lazy"
               />
             </div>
           ))}
@@ -134,6 +135,7 @@ function Nft() {
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
                 alt={img.image}
+                loading="lazy"
               />
             </div>
           ))}

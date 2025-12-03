@@ -35,7 +35,7 @@ function About() {
           >
             abandoned{" "}
           </span>
-          <img className="w-[68.8px] inline" src={Sad_Vito} alt="Sad_Vito" />
+          <img className="w-[68.8px] inline" src={Sad_Vito} alt="Sad_Vito" loading="lazy"/>
           {" in a cold "}
           <span
             className="text-white text-shadow-[2px_2px_0_rgba(0,0,0)]"
@@ -49,6 +49,7 @@ function About() {
             className="w-[70.46px] inline"
             src={vitoviktor_freezing}
             alt="vitoviktor_freezing"
+            loading="lazy"
           />
           {" , Vito waited—lonely"} <br /> {"but "}
           <span
@@ -64,6 +65,7 @@ function About() {
             className="w-[76.93px] inline"
             src={vitoviktor_happy_face}
             alt="vitoviktor_happy_face"
+            loading="lazy"
           />
         </div>
       </div>
@@ -102,7 +104,8 @@ function About() {
           <img
             className="rounded-[29px] h-full rotate-3 object-cover"
             src={Caline_Vito}
-            alt=""
+            alt="Caline_Vito"
+            loading="lazy"
           />
         </div>
       </div>
