@@ -9,24 +9,24 @@ function Footer() {
   return (
     <footer
       ref={ref}
-      className="relative w-full px-14 xl:px-18 pt-28 flex flex-col items-center justify-center gap-5"
+      className="relative w-full px-5 md:px-14 xl:px-18 pt-28 flex flex-col items-center justify-center gap-5"
     >
       <div className="flex flex-col items-center justify-center gap-5 pb-5">
         <img src={vitoviktor_logo} alt="vitoviktor_logo" loading="lazy" />
         <h2
-          className="font-gulfs-expanded text-[3rem]/[1] xl:text-[4rem]/[1] text-white text-shadow-[2px_2px_0_black]"
+          className="font-gulfs-expanded text-center text-[3rem]/[1] xl:text-[4rem]/[1] text-white text-shadow-[2px_2px_0_black]"
           style={{ WebkitTextStroke: "1px black" }}
         >
           FOLLOW US
         </h2>
       </div>
 
-      <div className="flex items-center justify-center gap-12">
+      <div className="flex flex-wrap shrink items-center justify-center gap-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
+          className="w-22 md:w-16 xl:w-[5.2rem] h-22 md:h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
           <a href="#" aria-label="Visit our Twitter/X">
             <span>
@@ -48,7 +48,7 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
-          className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
+          className="w-22 md:w-16 xl:w-[5.2rem] h-22 md:h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
           <a href="#" aria-label="Visit our TikTok">
             <span>
@@ -70,7 +70,7 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
-          className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
+          className="w-22 md:w-16 xl:w-[5.2rem] h-22 md:h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
           <a href="#" aria-label="Visit our Instagram">
             <span>
@@ -92,7 +92,7 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
-          className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
+          className="w-22 md:w-16 xl:w-[5.2rem] h-22 md:h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
           <a href="#" aria-label="Visit our Opensea">
             <span>
@@ -136,7 +136,7 @@ function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
-          className="w-16 xl:w-[5.2rem] h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
+          className="w-22 md:w-16 xl:w-[5.2rem] h-22 md:h-16 xl:h-[5.2rem] border-[0.8px] border-black rounded-full flex items-center justify-center shadow-[2px_4px_0_0_rgba(0,0,0)] hover:scale-90 transition-all duration-300 cursor-pointer"
         >
           <a href="#" aria-label="Join our Discord">
             <span>
@@ -157,7 +157,7 @@ function Footer() {
 
       <div className="flex items-center justify-center pt-5 pb-2.5">
         <div className="flex flex-wrap items-center justify-center gap-10">
-          <nav className="text-lg xl:text-xl">
+          <nav className="md:text-lg xl:text-xl">
             <ul className="flex gap-10 font-space font-bold">
               <li className="hover:text-[#023047] transition-all duration-300">
                 <a href="#about">About</a>
@@ -176,21 +176,21 @@ function Footer() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center pt-5 pb-2.5">
+      <div className="flex flex-col items-center justify-center pt-5 pb-2.5 text-center">
         <div>
-          <h2 className="text-[1.7rem]/[1] xl:text-[2rem]/[1] font-gulfs-expanded text-[#023047]">
+          <h2 className="text-[2rem]/[1] font-gulfs-expanded text-[#023047]">
             The Spirit
           </h2>
         </div>
         <div>
-          <p className="mb-[0.9rem] font-space text-lg xl:text-[1.4rem]">
+          <p className="mb-[0.9rem] font-space text-[1.4rem]">
             No roadmap but we are fully committed to building the Vito brand and
             IP !!!
           </p>
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-between pt-5 pb-2.5 text-[0.8rem]/[1] font-space">
+      <div className="w-full flex items-center justify-between md:pt-5 pb-5 md:pb-2.5 text-[0.8rem]/[1] font-space">
         <div>
           <ul className="flex items-center justify-center">
             <li>

@@ -10,10 +10,10 @@ import { motion, useInView } from "motion/react";
 
 function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.3, once: true });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
   return (
-    <section id="about" className="relative w-full mt-[75px] px-14 xl:px-18">
+    <section id="about" className="relative w-full mt-[75px] px-5 md:px-14 xl:px-18">
       <div className="flex flex-col items-center justify-center gap-5">
         <div className="text-center">
           <h2
@@ -25,7 +25,7 @@ function About() {
             ABOUT
           </h2>
         </div>
-        <div className="relative w-full text-center font-gulfs-expanded text-black text-[3rem] xl:text-[4.3rem] gap-5">
+        <div className="relative w-full text-center font-gulfs-expanded text-black text-[1.5rem] md:text-[3rem] xl:text-[4.3rem] gap-5">
           {" Once "}
           <span
             className="text-white text-shadow-[2px_2px_0_rgba(0,0,0)]"
@@ -35,7 +35,7 @@ function About() {
           >
             abandoned{" "}
           </span>
-          <img className="w-[68.8px] inline" src={Sad_Vito} alt="Sad_Vito" loading="lazy"/>
+          <img className="w-6 md:w-[68.8px] inline" src={Sad_Vito} alt="Sad_Vito" loading="lazy"/>
           {" in a cold "}
           <span
             className="text-white text-shadow-[2px_2px_0_rgba(0,0,0)]"
@@ -46,7 +46,7 @@ function About() {
             shelter{" "}
           </span>
           <img
-            className="w-[70.46px] inline"
+            className="w-6 md:w-[70.46px] inline"
             src={vitoviktor_freezing}
             alt="vitoviktor_freezing"
             loading="lazy"
@@ -62,7 +62,7 @@ function About() {
           </span>
           {" . "}
           <img
-            className="w-[76.93px] inline"
+            className="w-6 md:w-[76.93px] inline"
             src={vitoviktor_happy_face}
             alt="vitoviktor_happy_face"
             loading="lazy"
@@ -72,13 +72,13 @@ function About() {
 
       <div
         ref={ref}
-        className="mt-[150px] xl:h-[600px] flex items-center gap-[30px] mx-auto"
+        className="mt-[150px] xl:h-[600px] flex flex-col md:flex-row items-center gap-12 md:gap-[30px] mx-auto"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="font-space w-[50%] h-full text-center flex flex-col items-center justify-center gap-10"
+          className="font-space md:w-[50%] h-full text-center flex flex-col items-center justify-center gap-10"
         >
           <div className="relative text-[1.3rem] xl:text-[1.7rem] flex flex-col max-w-[99%]">
             <p className="mb-3.5">
@@ -100,7 +100,7 @@ function About() {
           <Button className="font-bold" text="LEARN MORE" />
         </motion.div>
 
-        <div className="w-[50%] h-full flex items-center justify-center">
+        <div className="md:w-[50%] h-full flex items-center justify-center">
           <img
             className="rounded-[29px] h-full rotate-3 object-cover"
             src={Caline_Vito}

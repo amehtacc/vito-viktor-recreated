@@ -20,22 +20,22 @@ function Hero() {
   return (
     <section
       ref={ref}
-      className="w-full h-auto bg-cover bg-center flex flex-col justify-start px-14 xl:px-18 -mt-[204px]"
+      className="w-full h-auto bg-cover bg-center flex flex-col justify-start px-5 md:px-14 xl:px-18 -mt-[204px]"
       style={{
         backgroundImage: `url(${vitoviktor_Hero_section_background_image})`,
       }}
     >
-      <div className="w-full pt-[304px] text-center">
+      <div className="w-full pt-[270px] md:pt-[304px] text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
           className="inline-block text-white"
         >
-          <h2 className="max-w-full text-[6rem]/[1] xl:text-[9rem]/[1] text-center font-gulfs-expanded text-shadow-[3px_5px_0_black]">
+          <h2 className="max-w-full text-[2.5rem]/[1] md:text-[6rem]/[1] xl:text-[9rem]/[1] text-center font-gulfs-expanded text-shadow-[2px_3px_0_black] md:text-shadow-[3px_5px_0_black]">
             MEET VITO
           </h2>
-          <div className="max-w-full text-[1.3rem]/[1] xl:text-[2rem]/[1] text-right font-gulfs-expanded text-shadow-[3px_5px_0_black]">
+          <div className="max-w-full md:text-[1.3rem]/[1] xl:text-[2rem]/[1] text-right font-gulfs-expanded text-shadow-[2px_3px_0_black] md:text-shadow-[3px_5px_0_black]">
             The little hippo
           </div>
         </motion.div>
@@ -44,24 +44,22 @@ function Hero() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{ translateY: yHero }}
-          className="-mt-[77px] xl:-mt-[107px] text-center flex flex-wrap items-center justify-center"
+          className="md:-mt-[77px] xl:-mt-[107px] text-center flex flex-wrap items-center justify-center"
         >
           <img
-            className="w-[350px] xl:w-[450px] h-auto"
+            className="w-60 md:w-[350px] xl:w-[450px] h-auto"
             src={Vitoviktor_superman_hero_section}
             alt="Vitoviktor_superman_hero_section"
           />
         </motion.div>
       </div>
 
-      <a href="#about" className="absolute left-[250px] xl:left-[440px] top-[350px] xl:top-[400px]">
+      <a href="#about" className="absolute left-22 md:left-[250px] xl:left-[440px] top-64 md:top-[350px] xl:top-[400px]">
         <div className="relative flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="120"
-            height="120"
             viewBox="0 0 250 250"
-            className="absolute animate-spin-slow font-space font-semibold"
+            className="w-16 md:w-[120px] h-16 md:h-[120px] absolute animate-spin-slow font-space font-semibold"
           >
             <path
               id="circlePath"
@@ -75,7 +73,7 @@ function Hero() {
             </text>
           </svg>
           <img
-            className="w-[85px] h-[85px] object-contain z-10"
+            className="w-[35px] md:w-[85px] object-contain"
             src={vitoviktor_happyface}
             alt="vitoviktor_happyface"
           />

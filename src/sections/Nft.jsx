@@ -22,7 +22,7 @@ function Nft() {
   const refGridContainer = useRef(null)
 
   const isButtonInView = useInView(refButton, { amount: 0.2, once: true });
-  const isGridInView = useInView(refGrid, { amount: 0.4, once: true });
+  const isGridInView = useInView(refGrid, { amount: 0.3, once: true });
 
   const { scrollYProgress } = useScroll({
     target: refGridContainer,
@@ -93,7 +93,7 @@ function Nft() {
         </div>
         <div className="text-center">
           <h2
-            className="font-gulfs-expanded text-white text-[3rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
+            className="font-gulfs-expanded text-white text-[2rem]/[1] md:text-[3.5rem]/[1] xl:text-[4rem]/[1] text-shadow-[2px_2px_0_rgba(0,0,0)]"
             style={{
               WebkitTextStroke: "1px black",
             }}
@@ -112,7 +112,7 @@ function Nft() {
           className="w-full grid grid-cols-6 grid-flow-row gap-3 xl:gap-5"
         >
           {images2.map((img, index) => (
-            <div key={index} className="w-full h-[190px] xl:h-[290px]">
+            <div key={index} className="w-[65px] md:w-full h-[90px] md:h-[190px] xl:h-[290px]">
               <img
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
@@ -130,7 +130,7 @@ function Nft() {
           className="w-full flex items-center justify-center gap-3 xl:gap-5"
         >
           {images1.map((img, index) => (
-            <div key={index} className="w-full h-[190px] xl:h-[290px]">
+            <div key={index} className="w-[65px] md:w-full h-[90px] md:h-[190px] xl:h-[290px]">
               <img
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}

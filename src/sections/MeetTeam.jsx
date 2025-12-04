@@ -28,7 +28,7 @@ function MeetTeam() {
   return (
     <section
       id="team"
-      className="relative w-full px-14 xl:px-18 pt-[220px] flex flex-col items-center justify-center gap-5"
+      className="relative w-full px-5 md:px-14 xl:px-18 pt-[175px] md:pt-[220px] flex flex-col items-center justify-center gap-5"
     >
       <div className="pb-[35px] text-center">
         <h2
@@ -41,7 +41,7 @@ function MeetTeam() {
         </h2>
       </div>
 
-      <div className="w-full grid grid-cols-3 grid-flow-row gap-5">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-5">
         {teamDetails.map((team, index) => (
           <TeamCard
             key={index}
