@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { vitoviktor_logo } from "../assets/images";
 import Button from "./Button";
+import { Menu, X} from "lucide-react";
+import MobileMenu from "./MobileMenu";
 
 function Header() {
+  const [openMenu, setOpenMenu] = useState(false)
   return (
     <header className="w-full h-[121px] relative z-10">
       {/* Top Header */}
-      <div className="w-full px-14 xl:px-18 mt-2.5">
+      <div className="hidden md:block w-full px-14 xl:px-18 mt-2.5">
         <ul className="mx-2 flex flex-wrap gap-4 justify-end">
           <li className="hover:-translate-y-[3px] transition-all duration-300">
             <a href="#" aria-label="Visit our Instagram">
@@ -114,12 +117,12 @@ function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="w-full px-14 xl:px-18 flex items-center justify-between">
+      <div className="w-full px-5 pt-4 pb-2 md:px-14 xl:px-18 flex items-center justify-between">
         <div>
-          <img src={vitoviktor_logo} alt="vitoviktor_logo" />
+          <img className={`w-[50px] md:w-full relative z-50 ${openMenu ? "invert-100" : ""} transition-all duration-300`} src={vitoviktor_logo} alt="vitoviktor_logo" />
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-10">
-          <nav>
+        <div className="flex flex-wrap md:items-center justify-center gap-7 md:gap-10">
+          <nav className="hidden md:flex">
             <ul className="flex gap-10 font-space font-bold uppercase">
               <li className="hover:-translate-y-[3px] transition-all duration-300">
                 <a href="#about">About</a>
@@ -136,10 +139,16 @@ function Header() {
             </ul>
           </nav>
           <span className="font-space font-bold">
-            <Button text="MINT NFT" />
+            <Button text="MINT NFT" className='max-md:-translate-[3px] max-md:group-hover:translate-[3px] max-md:text-[0.9rem]/[1] max-md:px-5 max-md:py-[15px] max-md:h-[47.6px]' className2='max-md:h-[47.6px]'/>
           </span>
+
+          <div className="md:hidden relative z-50 transition-all duration-300" onClick={() => setOpenMenu(prev => !prev)}>
+            {openMenu ? (<X className="w-10 h-10 text-white"/>) : (<Menu className="w-10 h-10"/>)}
+          </div>
         </div>
       </div>
+
+      <MobileMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
     </header>
   );
 }

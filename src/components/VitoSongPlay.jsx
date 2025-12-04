@@ -24,11 +24,11 @@ function VitoSongPlay() {
   }
 
   return (
-    <div ref={playerRef} className="w-full pt-12 pl-[1.8rem]">
-      <div className={`w-full ${isPlayerInView ? "relative" : "fixed bottom-6 z-50"}`}>
-        <div className="max-w-fit flex items-center justify-center border border-[rgb(8,54,66)] rounded-full px-4 py-2 gap-6">
+    <div ref={playerRef} className="w-full pt-5 md:pt-12 pl-2 md:pl-[1.8rem]">
+      <div className={`w-full ${isPlayerInView ? "relative" : "fixed bottom-6"} z-1`}>
+        <div className="max-w-fit flex items-center justify-center border border-[rgb(8,54,66)] rounded-full px-3 py-1.5 md:px-4 md:py-2 gap-4 md:gap-6">
           <img
-            className="w-14 xl:w-16 h-14 xl:h-16"
+            className="w-10 md:w-14 xl:w-16 h-10 md:h-14 xl:h-16"
             src={play ? vitoviktor_listening_to_music : vitoviktor_music}
             alt="vitoviktor_music"
           />
@@ -62,7 +62,7 @@ function VitoSongPlay() {
             ></div>
           </div>
           <img
-            className="w-9 xl:w-[42px] h-9 xl:h-[42px] cursor-pointer"
+            className="w-7 md:w-9 xl:w-[42px] h-7 md:h-9 xl:h-[42px] cursor-pointer"
             src={
               play
                 ? "https://vitoviktor.be/wp-content/uploads/2025/08/pause-button-blue.svg"
