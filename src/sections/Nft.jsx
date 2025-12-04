@@ -19,7 +19,7 @@ import { motion, useInView, useScroll, useTransform } from "motion/react";
 function Nft() {
   const refButton = useRef(null);
   const refGrid = useRef(null);
-  const refGridContainer = useRef(null)
+  const refGridContainer = useRef(null);
 
   const isButtonInView = useInView(refButton, { amount: 0.2, once: true });
   const isGridInView = useInView(refGrid, { amount: 0.3, once: true });
@@ -103,16 +103,24 @@ function Nft() {
         </div>
       </div>
 
-      <div ref={refGridContainer} className="w-full flex flex-col items-center justify-center gap-3 xl:gap-5 pb-5 overflow-hidden">
+      <div
+        ref={refGridContainer}
+        className="w-full flex flex-col items-center justify-center gap-3 xl:gap-5 pb-5 overflow-hidden"
+      >
         <motion.div
           initial={{ opacity: 0, x: -25 }}
           animate={isGridInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           style={{ translateX: xLeft }}
-          className="w-full grid grid-cols-6 grid-flow-row gap-3 xl:gap-5"
+          className="w-full grid grid-cols-3 md:grid-cols-6 grid-rows-1 grid-flow-row gap-3 md:gap-5"
         >
           {images2.map((img, index) => (
-            <div key={index} className="w-[65px] md:w-full h-[90px] md:h-[190px] xl:h-[290px]">
+            <div
+              key={index}
+              className={`w-full h-[120px] sm:h-[200px] xl:h-[290px] ${
+                index > 2 ? "hidden md:block" : ""
+              }`}
+            >
               <img
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
@@ -127,10 +135,15 @@ function Nft() {
           animate={isGridInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           style={{ translateX: xRight }}
-          className="w-full flex items-center justify-center gap-3 xl:gap-5"
+          className="w-full grid grid-cols-3 md:grid-cols-6 grid-rows-1 grid-flow-row gap-3 md:gap-5"
         >
           {images1.map((img, index) => (
-            <div key={index} className="w-[65px] md:w-full h-[90px] md:h-[190px] xl:h-[290px]">
+            <div
+              key={index}
+              className={`w-full h-[120px] sm:h-[200px] xl:h-[290px] ${
+                index > 2 ? "hidden md:block" : ""
+              }`}
+            >
               <img
                 className="w-full h-full object-cover rounded-[15px]"
                 src={img.image}
